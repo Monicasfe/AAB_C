@@ -10,8 +10,9 @@ class Automata:
         self.buildTransitionTable(pattern)        
     
     def buildTransitionTable(self, pattern): #o pattern vem como argumento pq não foi guardado no init da classe
-        for q in range(self.numstates):
-            for a in self.alphabet:
+        """"""
+        for q in range(self.numstates):#por cada caracter no padrão
+            for a in self.alphabet:#pelo alfabeto
                 prefixo = pattern[:q] + a #aqui não precisamos de q-1 pq o q é exclusivo nº final da [] não conta
                 self.transitionTable[(q,a)] = overlap(prefixo, pattern) #q é o estado onde estou, e a o estado para onde vou
        
@@ -45,12 +46,13 @@ class Automata:
             if q == self.numstates - 1:
                 res.append(aa - self.numstates + 2)
                 #para ter o tamanho da seq pomos 1 e depois para dar a casa em branco pomos outro
-        return res
+        return res#retorna a lista com as posições onde ocorrem os padrões
 
 def overlap(s1, s2):
     maxov = min(len(s1), len(s2))
     for i in range(maxov,0,-1):
-        if s1[-i:] == s2[:i]: return i
+        if s1[-i:] == s2[:i]:#se o ultimo i igual ao primeiro  i retorna i
+            return i
     return 0
                
 def test():

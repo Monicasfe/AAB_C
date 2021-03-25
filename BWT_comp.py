@@ -9,14 +9,14 @@ class BWT:
         self.bwt = bw
 
     def build_bwt(self, text, buildsufarray = False):
-        """Retorna a ultima linha da matriz pela ordenacao lexicografica, ou seja a BWT em si"""
+        """Retorna a ultima linha da matriz pela ordenacao lexicografica, ou seja, a BWT em si"""
         ls = []
         for i in range(len(text)):
             ls.append(text[i:] + text[:i]) #cria as rotacoes
         ls.sort() #ordem aflabetica da coluna 1
         res = " "
         for j in range(len(text)):
-            res += ls[j][len(text)-1]#adiciona ao res a ultima letra de cada linha, ou seja, a ultiam coluna que é a bwt
+            res += ls[j][len(text)-1]#adiciona ao res a ultima letra de cada linha, ou seja, a ultima coluna que é a bwt
         if buildsufarray:
             self.sa = []
             for i in range(len(ls)):
@@ -119,7 +119,7 @@ def test3():
     print("Suffix array:", bw.sa)
     print(bw.bw_matching_pos("AGA"))
 
-#test()
+test()
 #test2()
-test3()
+#test3()
 
