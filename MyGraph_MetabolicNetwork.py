@@ -17,8 +17,8 @@ class MyGraph:
 
     def print_graph(self):
         ''' Prints the content of the graph as adjacency list '''
-        for v in self.graph.keys():  # para cada key no dicionario (vertice)
-            print(v, " -> ", self.graph[v])  # para cada key no dicionario (vertice)
+        for v in self.graph.keys():  #para cada key no dicionario (vertice)
+            print(v, " -> ", self.graph[v])  #para cada key no dicionario (vertice)
 
     ## get basic info
 

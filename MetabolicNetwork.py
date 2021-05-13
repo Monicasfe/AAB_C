@@ -85,7 +85,7 @@ class MetabolicNetwork (MyGraph):
         
         
     def convert_metabolite_net(self, gmr):
-        for m in gmr.node_types["metabolite"]: #same que as reações mas para os metaboitos
+        for m in gmr.node_types["metabolite"]: #o mesmo que as reações mas para os metaboitos
             self.add_vertex(m)
             suce = gmr.get_successors(m)
             for r in suce:
