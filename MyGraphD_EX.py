@@ -19,7 +19,7 @@ class MyGraphD:
         ''' Returns edges in the graph as a list of tuples (origin, destination, peso) '''
         edges = []
         for v in self.graph.keys(): #o v é a origem e de é o destino
-            for des in self.graph[v]: #vai buscar o valor da chave v, ou seja o destinom dai o des
+            for des in self.graph[v]: #vai buscar o valor da chave v, ou seja o destino, dai o des
                 d, p = des
                 edges.append((v, d, p))
         return edges
@@ -127,7 +127,7 @@ class MyGraphD:
                 node, dista = l.pop(0)  #isolar o 1º no na queue com a distancia somada (soma dos pesos do caminho percorrido)
                 for elem in self.graph[node]: #iterar os sucessores do vertice s
                     vertice, peso = elem
-                    if vertice == d:
+                   if  vertice == d:
                         return dista + peso
                     if vertice not in visitado and vertice not in l and vertice != node:  # adicionar á queue
                         l.append((vertice, dista + peso))
