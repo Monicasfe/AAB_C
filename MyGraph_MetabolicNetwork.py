@@ -13,7 +13,7 @@ class MyGraph:
 
     def __init__(self, g={}):
         ''' Constructor - takes dictionary to fill the graph as input; default is empty dictionary '''
-        self.graph = g  # unico atributo (g = dicionario)
+        self.graph = g  #unico atributo (g = dicionario)
 
     def print_graph(self):
         ''' Prints the content of the graph as adjacency list '''

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from MyGraph_MN import MyGraph
+from MyGraph_MetabolicNetwork import MyGraph
 
 class MetabolicNetwork (MyGraph):
     
