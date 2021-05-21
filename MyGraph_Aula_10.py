@@ -400,11 +400,12 @@ class MyGraph:
                         ciclo.append(proximo) #vamo dar apende ao cilco,ou seja, ao caminho do proximo que vai ter o valor de suce
                         edges_visit.remove(par) #vamos remover o par dos a visitar uma vez que já foi visitado
             if res == []: #se res é lista vazia
-                res = ciclo #então res vai ser = ao ciclo
+                res = ciclo #então res vai ser = ao ciclo 1º ciclo obtido
             else:
-                pos = res.index(ciclo[0]) #posição vai ser igual ao index da posição 0 do ciclo
-                for i in range(len(ciclo)-1): #por cada i no range do tamanho do ciclo -1
-                    res.insert(pos + i + 1, ciclo[i + 1]) #vamos adicionar ao a posição inicial mais, mais a pos do ciclo, ou seja a origem e o destino
+                #isto vai juntar os ciclos todos
+                pos = res.index(ciclo[0])
+                for i in range(len(ciclo)-1):
+                    res.insert(pos + i + 1, ciclo[i + 1])
         return res #retorna o ciclo euleriano
       
     def eulerian_path(self):
